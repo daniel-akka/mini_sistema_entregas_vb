@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0BE85F3-8DE5-4C7E-83DD-733B89431F27}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>AppDeEntrega.My.MyApplication</StartupObject>
+    <RootNamespace>AppDeEntrega</RootNamespace>
+    <AssemblyName>AppDeEntrega</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>AppDeEntrega.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>AppDeEntrega.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>IconeParaAplicativo-ICO-48.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Mono.Security">
+      <HintPath>..\DLLs\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\DLLs\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassesProjeto\ClFuncoes.vb" />
+    <Compile Include="Classes\Bin\Backup\Backup.vb" />
+    <Compile Include="Classes\Bin\Cadastro\Cidade.vb" />
+    <Compile Include="Classes\Bin\Cadastro\Empresa.vb" />
+    <Compile Include="Classes\Bin\Cadastro\Entregador.vb" />
+    <Compile Include="Classes\Bin\Cadastro\Fornecedor.vb" />
+    <Compile Include="Classes\Bin\Cadastro\Produto.vb" />
+    <Compile Include="Classes\Bin\Cadastro\ValorAdicional.vb" />
+    <Compile Include="Classes\Bin\Configuracao\Configuracoes.vb" />
+    <Compile Include="Classes\Bin\Movimentacao\ClDespesaMensal.vb" />
+    <Compile Include="Classes\Bin\Movimentacao\ClDespesaMensalmpressao.vb" />
+    <Compile Include="Classes\Bin\Movimentacao\ClDespesaProduto.vb" />
+    <Compile Include="Classes\Bin\Movimentacao\ClGrupoDespMensal.vb" />
+    <Compile Include="Classes\Bin\Movimentacao\ClSubGrupoDespMensal.vb" />
+    <Compile Include="Classes\Bin\Movimentacao\ClSubGrupoDespMensalImpr.vb" />
+    <Compile Include="Classes\Bin\Movimentacao\EntradaDeProdutos.vb" />
+    <Compile Include="Classes\Bin\Movimentacao\PagamentoComissao.vb" />
+    <Compile Include="Classes\Bin\Movimentacao\PagamentoComissaoFornecedor.vb" />
+    <Compile Include="Classes\Bin\Movimentacao\Rota.vb" />
+    <Compile Include="Classes\Bin\Movimentacao\SaidaDeProdutos.vb" />
+    <Compile Include="Classes\Bin\Relatorio\RelatorioComissao.vb" />
+    <Compile Include="Classes\Bin\Relatorio\RelatorioDespesas.vb" />
+    <Compile Include="Classes\Bin\Relatorio\RelatorioFluxoFinanceiro.vb" />
+    <Compile Include="Classes\Bin\Relatorio\RelatorioProdutos.vb" />
+    <Compile Include="Classes\Dao\Cadastro\CidadeDAO.vb" />
+    <Compile Include="Classes\Bin\Cadastro\DescricaoRota.vb" />
+    <Compile Include="Classes\Dao\Cadastro\DescricaoRotaDAO.vb" />
+    <Compile Include="Classes\Dao\Cadastro\EmpresaDAO.vb" />
+    <Compile Include="Classes\Dao\Cadastro\EntregadorDAO.vb" />
+    <Compile Include="Classes\Dao\Cadastro\FornecedorDAO.vb" />
+    <Compile Include="Classes\Dao\Cadastro\ProdutoDAO.vb" />
+    <Compile Include="Classes\Dao\Cadastro\ValorAdicionalDAO.vb" />
+    <Compile Include="Classes\Dao\Configuracao\ConfiguracaoDAO.vb" />
+    <Compile Include="Classes\Dao\Movimentacao\ClDespesaMensalDAO.vb" />
+    <Compile Include="Classes\Dao\Movimentacao\ClDespesaProdutoDAO.vb" />
+    <Compile Include="Classes\Dao\Movimentacao\ClGrupoDespMensalDAO.vb" />
+    <Compile Include="Classes\Dao\Movimentacao\ClSubGrupoDespMensalDAO.vb" />
+    <Compile Include="Classes\Dao\Movimentacao\EntradaDeProdutosDAO.vb" />
+    <Compile Include="Classes\Dao\Movimentacao\PagamentoComissaoDAO.vb" />
+    <Compile Include="Classes\Dao\Movimentacao\PagamentoComissaoFornecedorDAO.vb" />
+    <Compile Include="Classes\Dao\Movimentacao\RotaDAO.vb" />
+    <Compile Include="Classes\Dao\Movimentacao\SaidaDeProdutosDAO.vb" />
+    <Compile Include="Classes\Dao\Relatorio\FluxoFinanceiroDAO.vb" />
+    <Compile Include="FormPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.vb">
+      <DependentUpon>FormPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDL\MdlConexaoBD.vb" />
+    <Compile Include="MDL\MdlConfiguracoes.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Telas\Cadastro\FormCadCidade.Designer.vb">
+      <DependentUpon>FormCadCidade.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastro\FormCadCidade.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastro\FormCadEmpresa.Designer.vb">
+      <DependentUpon>FormCadEmpresa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastro\FormCadEmpresa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastro\FormCadEntregador.Designer.vb">
+      <DependentUpon>FormCadEntregador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastro\FormCadEntregador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastro\FormCadFornecedor.Designer.vb">
+      <DependentUpon>FormCadFornecedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastro\FormCadFornecedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastro\FormCadProduto.Designer.vb">
+      <DependentUpon>FormCadProduto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastro\FormCadProduto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cadastro\FormCadValorAdicional.Designer.vb">
+      <DependentUpon>FormCadValorAdicional.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cadastro\FormCadValorAdicional.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Configuracao\FormConfiguracoes.Designer.vb">
+      <DependentUpon>FormConfiguracoes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Configuracao\FormConfiguracoes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\FormsResponse\FrmSubGrupoResp.Designer.vb">
+      <DependentUpon>FrmSubGrupoResp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\FormsResponse\FrmSubGrupoResp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\FormEntradaDeProdutos.Designer.vb">
+      <DependentUpon>FormEntradaDeProdutos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\FormEntradaDeProdutos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\FormHistoricoDeMovimentacao.Designer.vb">
+      <DependentUpon>FormHistoricoDeMovimentacao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\FormHistoricoDeMovimentacao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\FormLancamentoDeRota.Designer.vb">
+      <DependentUpon>FormLancamentoDeRota.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\FormLancamentoDeRota.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\FormPagamentoComissao.Designer.vb">
+      <DependentUpon>FormPagamentoComissao.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\FormPagamentoComissao.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\FormRecebimentoFornecedor.Designer.vb">
+      <DependentUpon>FormRecebimentoFornecedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\FormRecebimentoFornecedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\FormSaidaDeProdutos.Designer.vb">
+      <DependentUpon>FormSaidaDeProdutos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\FormSaidaDeProdutos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\Outras Despesas\FrmMenuDespesaMensal.Designer.vb">
+      <DependentUpon>FrmMenuDespesaMensal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\Outras Despesas\FrmMenuDespesaMensal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\Outras Despesas\FrmCadDespesaMensal.Designer.vb">
+      <DependentUpon>FrmCadDespesaMensal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\Outras Despesas\FrmCadDespesaMensal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\Outras Despesas\FrmCadGrupoDespMensal.Designer.vb">
+      <DependentUpon>FrmCadGrupoDespMensal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\Outras Despesas\FrmCadGrupoDespMensal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\Outras Despesas\FrmCadSubGrupoDespMensal.Designer.vb">
+      <DependentUpon>FrmCadSubGrupoDespMensal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Movimentacao\Outras Despesas\FrmCadSubGrupoDespMensal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaComissaoEntregador.Designer.vb">
+      <DependentUpon>FormListaComissaoEntregador.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaComissaoEntregador.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaDespesasMensal.Designer.vb">
+      <DependentUpon>FormListaDespesasMensal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaDespesasMensal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaEntradasProduto.Designer.vb">
+      <DependentUpon>FormListaEntradasProduto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaEntradasProduto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaRecebimentoFornecedor.Designer.vb">
+      <DependentUpon>FormListaRecebimentoFornecedor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaRecebimentoFornecedor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaRotas.Designer.vb">
+      <DependentUpon>FormListaRotas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaRotas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaSaidaProduto.Designer.vb">
+      <DependentUpon>FormListaSaidaProduto.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaSaidaProduto.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaSubGrupo.Designer.vb">
+      <DependentUpon>FormListaSubGrupo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormListaSubGrupo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormRelatorioFinanceiro.Designer.vb">
+      <DependentUpon>FormRelatorioFinanceiro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Relatorio\FormRelatorioFinanceiro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Relatorio\ImpressaoRelatorioFinanceiro.Designer.vb">
+      <DependentUpon>ImpressaoRelatorioFinanceiro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Relatorio\ImpressaoRelatorioFinanceiro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastro\FormCadCidade.resx">
+      <DependentUpon>FormCadCidade.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastro\FormCadEmpresa.resx">
+      <DependentUpon>FormCadEmpresa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastro\FormCadEntregador.resx">
+      <DependentUpon>FormCadEntregador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastro\FormCadFornecedor.resx">
+      <DependentUpon>FormCadFornecedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastro\FormCadProduto.resx">
+      <DependentUpon>FormCadProduto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cadastro\FormCadValorAdicional.resx">
+      <DependentUpon>FormCadValorAdicional.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Configuracao\FormConfiguracoes.resx">
+      <DependentUpon>FormConfiguracoes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\FormsResponse\FrmSubGrupoResp.resx">
+      <DependentUpon>FrmSubGrupoResp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Movimentacao\FormEntradaDeProdutos.resx">
+      <DependentUpon>FormEntradaDeProdutos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Movimentacao\FormHistoricoDeMovimentacao.resx">
+      <DependentUpon>FormHistoricoDeMovimentacao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Movimentacao\FormLancamentoDeRota.resx">
+      <DependentUpon>FormLancamentoDeRota.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Movimentacao\FormPagamentoComissao.resx">
+      <DependentUpon>FormPagamentoComissao.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Movimentacao\FormRecebimentoFornecedor.resx">
+      <DependentUpon>FormRecebimentoFornecedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Movimentacao\FormSaidaDeProdutos.resx">
+      <DependentUpon>FormSaidaDeProdutos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Movimentacao\Outras Despesas\FrmMenuDespesaMensal.resx">
+      <DependentUpon>FrmMenuDespesaMensal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Movimentacao\Outras Despesas\FrmCadDespesaMensal.resx">
+      <DependentUpon>FrmCadDespesaMensal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Movimentacao\Outras Despesas\FrmCadGrupoDespMensal.resx">
+      <DependentUpon>FrmCadGrupoDespMensal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Movimentacao\Outras Despesas\FrmCadSubGrupoDespMensal.resx">
+      <DependentUpon>FrmCadSubGrupoDespMensal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Relatorio\FormListaComissaoEntregador.resx">
+      <DependentUpon>FormListaComissaoEntregador.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Relatorio\FormListaDespesasMensal.resx">
+      <DependentUpon>FormListaDespesasMensal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Relatorio\FormListaEntradasProduto.resx">
+      <DependentUpon>FormListaEntradasProduto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Relatorio\FormListaRecebimentoFornecedor.resx">
+      <DependentUpon>FormListaRecebimentoFornecedor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Relatorio\FormListaRotas.resx">
+      <DependentUpon>FormListaRotas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Relatorio\FormListaSaidaProduto.resx">
+      <DependentUpon>FormListaSaidaProduto.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Relatorio\FormListaSubGrupo.resx">
+      <DependentUpon>FormListaSubGrupo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Relatorio\FormRelatorioFinanceiro.resx">
+      <DependentUpon>FormRelatorioFinanceiro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Relatorio\ImpressaoRelatorioFinanceiro.resx">
+      <DependentUpon>ImpressaoRelatorioFinanceiro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Relatorio\RelatorioFinanceiro.rdlc" />
+    <EmbeddedResource Include="Telas\Relatorio\RelatorioListaComissoesEntregador.rdlc" />
+    <EmbeddedResource Include="Telas\Relatorio\RelatorioListaDespesasMensal.rdlc" />
+    <EmbeddedResource Include="Telas\Relatorio\RelatorioListaEntradaProdutos.rdlc" />
+    <EmbeddedResource Include="Telas\Relatorio\RelatorioListaRecebimentoFornecedor.rdlc" />
+    <EmbeddedResource Include="Telas\Relatorio\RelatorioListaRotas.rdlc" />
+    <EmbeddedResource Include="Telas\Relatorio\RelatorioListaSaidaProduto.rdlc" />
+    <EmbeddedResource Include="Telas\Relatorio\RelatorioListaSubGrupos.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\DataSources\ClDespesaMensal.datasource" />
+    <None Include="My Project\DataSources\ClSubGrupoDespMensalImpr.datasource" />
+    <None Include="My Project\DataSources\EntradaDeProdutos.datasource" />
+    <None Include="My Project\DataSources\PagamentoComissao.datasource" />
+    <None Include="My Project\DataSources\PagamentoComissaoFornecedor.datasource" />
+    <None Include="My Project\DataSources\RelatorioFluxoFinanceiro.datasource" />
+    <None Include="My Project\DataSources\Rota.datasource" />
+    <None Include="My Project\DataSources\SaidaDeProdutos.datasource" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundTelas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Telas\Sincronizar\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imprime.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok_16x16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\desfazer-color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\visualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="iconeparaaplicativo-ICO-128.ico" />
+    <Content Include="IconeParaAplicativo-ICO-48.ico" />
+    <Content Include="IconeParaAplicativo-ICO-512px.ico" />
+    <Content Include="IconeParaAplicativo-ICO_64px.ico" />
+    <Content Include="IconeParaAplicativo-PNG-32px.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
